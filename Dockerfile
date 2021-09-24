@@ -1,6 +1,6 @@
 FROM docker.io/timschumi/docker-cgit:latest
 
-RUN apk add python3 curl bash git gnupg openssh && \
+RUN apk add --no-cache python3 curl bash git gnupg openssh && \
     ln -sf python3 /usr/bin/python && \
     curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo && \
     chmod a+x /usr/local/bin/repo && \
