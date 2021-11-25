@@ -15,7 +15,7 @@
             line_split=(${line// : / })
             line_path=${line_split[0]}
             line_url=${line_split[1]}
-            if ! [[ "${line_path}" =~ *".git" ]]; then
+            if ! [[ "${line_path}" =~ ^.*\.git$ ]]; then
                 line_path="${line_path}.git"
             fi
             echo "repo.url=${line_url}" >> cgitrepos
