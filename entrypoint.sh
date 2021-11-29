@@ -5,6 +5,8 @@
 
     if [ ! -d .repo ]; then
         repo init -u "${MANIFEST_URL}" -b "${MANIFEST_REVISION}" -m "${MANIFEST_NAME}" -g "${MANIFEST_GROUPS}" --mirror
+    else
+        repo init -u "${MANIFEST_URL}" -b "${MANIFEST_REVISION}" -m "${MANIFEST_NAME}" -g "${MANIFEST_GROUPS}"
     fi
 
     while true; do
