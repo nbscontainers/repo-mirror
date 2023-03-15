@@ -1,4 +1,4 @@
-FROM docker.io/timschumi/docker-cgit:latest
+FROM ghcr.io/nbscontainers/cgit:latest
 
 RUN apk add --no-cache python3 curl bash git gnupg openssh && \
     ln -sf python3 /usr/bin/python && \
